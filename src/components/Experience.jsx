@@ -6,6 +6,10 @@ import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import node from "../assets/node.png"
+import mysql from "../assets/mysql.png"
+import python from "../assets/python.png"
+
 
 const Experience = () => {
   const techs = [
@@ -40,7 +44,25 @@ const Experience = () => {
       style: "shadow-sky-400",
     },
     {
+      id: 6,
+      src: node,
+      title: "Node.js",
+      style: "shadow-green-400",
+    },
+    {
+      id: 7,
+      src: mysql,
+      title: "MySQL",
+      style: "shadow-orange-400",
+    },
+    {
       id: 8,
+      src: python,
+      title: "Python",
+      style: "shadow-blue-400",
+    },
+    {
+      id: 9,
       src: github,
       title: "GitHub",
       style: "shadow-gray-400",

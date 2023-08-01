@@ -1,11 +1,20 @@
 import React from "react";
 import Quiz from "../assets/portfolio/quiz.jpg";
+import TTT from "../assets/portfolio/tic-tac-toe.jpg"
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
       src: Quiz,
+      demo: "https://mindameld.surge.sh",
+      code: "https://github.com/josephnijo12/MindaMeld-Project-4-",
+    },
+    {
+      id: 2,
+      src: TTT,
+      demo: "https://josephnijo12.github.io/tic-tac-toe/",
+      code: "https://github.com/josephnijo12/tic-tac-toe",
     },
   ];
 
@@ -23,25 +32,30 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, demo, code }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
                 alt=""
-                className="rounded-md duration-200 hover:scale-105"
+                className="rounded-md duration-200 hover:scale-105 object-cover h-64 w-full" // set the height and width
               />
               <div className="flex items-center justify-center">
                 <a
-                  href="https://mindameld.surge.sh"
+                  href={demo}
                   target="_blank" // Open the link in a new tab
                   rel="noopener noreferrer" // Add security attributes
                   className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
                 >
                   Demo
                 </a>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <a
+                  href={code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                >
                   Code
-                </button>
+                </a>
               </div>
             </div>
           ))}
